@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400&family=Lobster&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root
+{
+    --color: #3e4453;
+    --btn-color: #e54343;
+}
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background: var(--color);
+}
+
+.container
+{
+    width: 310px;
+    height: 500px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.card
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(./Images/model.jpg);
+    background-size: cover;
+    transition: all 0.5s ease-in-out;
+    background-position: center;
+    padding-top: 10px;
+}
+
+.top-nav
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    /* display: none; */
+    transition: all 0.5s ease-in-out;
+}
+
+.container.on .top-nav
+{
+    display: flex;
+}
+
+.top-nav i 
+{
+    color: #eee;
+    font-size: 23px;
+    top: 0;
+    cursor: pointer;
+}
+
+.front
+{
+    margin: 100px 0 0 30px;
+}
+
+.card h1
+{
+    color: #fff;
+    font-size: 3.5rem;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 2px;
+}
+
+.card .btn
+{
+    background: transparent;
+    border: 1px solid #eee;
+    padding: 10px 30px;
+    border-radius: 30px;
+    color: #eee;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    margin: 30px 0 0 0;
+}
+
+.card .btn i
+{
+    font-size: 13px;
+    justify-content: space-between;
+    animation: move 0.5s infinite ease alternate;
+}
+
+@keyframes move
+{
+    from{
+        transform: translateX(-5px);
+    }
+    to {
+        transform: translateX(5px);
+    }
+}
+
+.container.on .card
+{
+    height: 50%;
+    background-position: center;
+}
+
+.container.on .front
+{
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.card-info
+{
+    background: #fff;
+    width: 100%;
+    height: 50%;
+    position: relative;
+    text-align: center;
+    padding: 30px 0 0;
+    color: var(--color);
+    font-family: 'Roboto', sans-serif;
+}
+
+.container.on .btnplus
+{
+    background: var(--btn-color);
+    border: 0;
+    color: #fff;
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0px 2px 10px 0px rgba(288, 0, 70, 0.3);
+    position: absolute;
+    top: -27px;
+    left: 17px;
+    cursor: pointer;
+    outline: none;
+}
+
+.btnplus
+{
+    left: 0;
+    top: 0;
+}
+
+.container.on .btn-c
+{
+    background: var(--btn-color);
+    border: 0;
+    color: #fff;
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0px 2px 10px 0px rgba(288, 0, 70, 0.3);
+    position: absolute;
+    top: -27px;
+    right: 17px;
+    cursor: pointer;
+    outline: none;
+}
+
+.card-info h1
+{
+    font-size: 2rem;
+    margin: 10px 0 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-info h1 .web
+{
+    font-weight: 600;
+}
+
+hr
+{
+    margin: 30px 0;
+}
+.about
+{
+    margin: -15px 0 15px 0;
+}
+
+.about .text
+{
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+.social
+{
+    margin: 10px 0 15px 0;
+}
+
+.social a
+{
+    height: 40px;
+    width: 40px;
+    display: inline-flex;
+    text-decoration: none;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: #ecf0f3;
+    box-shadow: -3px -3px 7px #ffffff,
+                    3px 3px 5px #ceced1
+}
+
+.social a.twitter i
+{
+    color: #1DA1F2;
+}
+
+.social a.insta i
+{
+    color: #E1306C;
+}
+
+.social a.youtube i
+{
+    color: #ff0000;
+}
+
+
+.social a i
+{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+}
+
